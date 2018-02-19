@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fixed_price: 1
+  guitar: one
+  user: one
+
+two:
+  fixed_price: 1
+  guitar: two
+  user: two
