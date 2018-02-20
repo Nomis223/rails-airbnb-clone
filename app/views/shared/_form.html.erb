@@ -1,0 +1,10 @@
+<%= simple_form_for @guitar do |f| %>
+<%= f.input :brand %>
+<%= f.input :category %>
+<%= f.input :description %>
+<%= f.input :address %>
+<%= f.input :price_per_day %>
+<%= f.input :image %>
+<%= f.input :image_cache, as: :hidden %>
+<%= f.submit "add new guitar", class: "btn btn-primary" %>
+<% end %>
