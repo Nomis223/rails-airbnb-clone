@@ -11,6 +11,10 @@ class GuitarsController < ApplicationController
     # authorize @guitars
   end
 
+  def new
+    @guitar = Guitar.new
+  end
+
   def show
     authorize @guitar
   end
