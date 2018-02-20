@@ -1,6 +1,6 @@
 class GuitarPolicy < ApplicationPolicy
   class Scope < Scope
-    def resolve
+    def resolve #Index
       scope
     end
   end
@@ -9,10 +9,6 @@ class GuitarPolicy < ApplicationPolicy
   def show?
     true
   end
-
-  # def new?
-    
-  # end
 
   def create?
     true

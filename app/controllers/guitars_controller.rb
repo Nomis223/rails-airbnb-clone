@@ -10,16 +10,9 @@ class GuitarsController < ApplicationController
     end
   end
 
-  # def new
-  #   @guitar = Guitar.new
-  # end
-
-  # def create
-    
-  # end
-
   def create
     @guitar = Guitar.new(guitar_params)
+    authorize @guitar
     @guitar.user = current_user
     if @guitar.save
       redirect_to guitar_path(@guitar)
