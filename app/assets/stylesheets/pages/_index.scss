@@ -1,2 +1,25 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// * {
+//   border: 1px solid black;
+// }
+
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  height: 250px;
+}
+
+.maps-container {
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+

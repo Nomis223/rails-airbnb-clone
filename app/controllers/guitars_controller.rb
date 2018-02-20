@@ -3,7 +3,11 @@ class GuitarsController < ApplicationController
   before_action :set_guitar, only:[:show]
 
   def index
-    @guitars = Guitar.all
+    if params[:query].present?
+      @guitars = Guitar.where("brand ILIKE ? AND address ILIKE ?", "%#{params[:brand]}%", "%#{params[:address]}%")
+    else
+      @guitars = Guitar.all
+    end
     authorize @guitars
   end
 
