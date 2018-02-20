@@ -11,9 +11,9 @@
         <p><%= @guitar.description %></p>
       </div>
       <div class="col-xs-6" id="butt">
-        <button class="btn btn-danger">
-          Book!
-        </button>
+        <%=  link_to root_path do %>
+          <button class="btn btn-danger">Book!</button>
+        <% end %>
       </div>
     </div>
   </div>
