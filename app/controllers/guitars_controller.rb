@@ -4,16 +4,19 @@ class GuitarsController < ApplicationController
 
   def index
     if params[:query].present?
-      @guitars = Guitar.where("brand ILIKE ? AND address ILIKE ?", "%#{params[:brand]}%", "%#{params[:address]}%")
+      @guitars = policy_scope(Guitar).where("brand ILIKE ? AND address ILIKE ?", "%#{params[:brand]}%", "%#{params[:address]}%")
     else
-      @guitars = Guitar.all
+      @guitars = policy_scope(Guitar).all
     end
-    # authorize @guitars
   end
 
-  def new
-    @guitar = Guitar.new
-  end
+  # def new
+  #   @guitar = Guitar.new
+  # end
+
+  # def create
+    
+  # end
 
   def create
     @guitar = Guitar.new(guitar_params)
