@@ -5,11 +5,16 @@ class GuitarPolicy < ApplicationPolicy
     end
   end
 
-  # def index?
+
+  def show?
+    true
+  end
+
+  # def new?
     
   # end
 
-  def show?
+  def create?
     true
   end
 
