@@ -1,0 +1,20 @@
+ <div class="g-pic">
+  <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <h2><%= @guitar.user.email %>'s</h2>
+        <p><%= @guitar.brand %></p>
+        <p><%= @guitar.category %></p>
+        <p><%= @guitar.description %></p>
+      </div>
+      <div class="col-xs-6" id="butt">
+        <button class="btn btn-danger">
+          Book!
+        </button>
+      </div>
+    </div>
+  </div>
+
