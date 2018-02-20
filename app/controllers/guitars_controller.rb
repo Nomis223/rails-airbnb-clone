@@ -8,7 +8,7 @@ class GuitarsController < ApplicationController
     else
       @guitars = Guitar.all
     end
-    authorize @guitars
+    # authorize @guitars
   end
 
   def show
