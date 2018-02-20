@@ -10,6 +10,7 @@
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= guitar.image %>');">
           <div class="card-description">
             <h4><%= guitar.brand[0..20] %></h4>
+            <p><%= guitar.price_per_day %> EUR/day</p>
           </div>
           <img class="card-user" src= '<%= guitar.user.avatar %>'>
         </div>
