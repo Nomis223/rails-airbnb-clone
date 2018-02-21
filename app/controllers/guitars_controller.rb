@@ -10,6 +10,11 @@ class GuitarsController < ApplicationController
     end
   end
 
+  def new
+    @guitar = Guitar.new
+    authorize @guitar
+  end
+
   def create
     @guitar = Guitar.new(guitar_params)
     authorize @guitar
