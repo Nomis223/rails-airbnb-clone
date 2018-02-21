@@ -1,3 +1,4 @@
+Booking.destroy_all
 Guitar.destroy_all
 User.destroy_all
 
@@ -156,6 +157,86 @@ guitar_attributes = [
   latitude:       13.4430341,
   image:          'https://polaris-web-pub.s3.amazonaws.com/media/first-act/products/full/e8268650-6afe-11e7-beb9-0fe1c11520b2.png',
   user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Electric',
+  description:    'A period of change, both for Fender and for pop culture as a whole, the 1960s saw the Strat mellow slightly as it grew up. The white pickguard was updated to mint green, and the fingerboard was switched from the original maple to rosewood, adding a smoother note to the Strat’s clear, articulate voice. The American Original ‘60s Stratocaster keeps these refinements intact while adding modern feel and pickup switching to the iconic instrument that helped birth guitar rock as we know it.',
+  address:        'Egelingzeile 6, 12103 Berlin',
+  longitude:      52.463701,
+  latitude:       13.3667363,
+  image:          "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0110120809_gtr_frt_001_rr.jpg",
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Electric',
+  description:    'Bringing to life the vision of one of the most respected guitarists in the world, the Eric Johnson Signature Stratocaster Thinline is the perfect marriage between a semi-hollow body and a traditional Stratocaster. Johnson is famous in guitar circles for questing for his ideal tone—liquid and articulate, it perfectly complements the playing style that earned his place in the modern guitar pantheon. In 2015 he approached us to co-design a lightweight, resonant instrument that combines the tones of his favorite semi-hollowbody guitars and his Stratocaster. Two years later, we hit the formula for tonal nirvana with the Eric Johnson Signature Stratocaster Thinline.',
+  address:        'Burchardstraße 38, 12103 Berlin',
+  longitude:      52.4663732,
+  latitude:       13.3693713,
+  image:          'https://www.fmicassets.com/Damroot/ZoomJpg/10001/0113602703_gtr_frt_001_rr.jpg',
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Aucustic',
+  description:    'With sound and style tough enough to rock a chicken-wire-enclosed stage, the Deluxe Roadhouse Strat is the perfect instrument for tearing it up all night long. Packed with a wide-ranging variety of tones, ranging from tough, wiry single-coil spank to a high-output sound thats perfect for searing leads, this guitar is versatile enough to handle anything you throw at it with style. Its the perfect instrument for a performer who demands sonic flexibility and the ability to easily switch sounds at the drop of a hat.',
+  address:        'Kol.Kleeblatt Rosenweg 2-8, 12109 Berlin',
+  longitude:      52.451806,
+  latitude:       13.4066215,
+  image:          'http://www.deanguitars.com/images/productimages/rcenm/rcenm.png',
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Electric',
+  description:    'Fat, hard-rockin sound and elegant Fender style unite in the Deluxe Strat HSS, a versatile tone machine with power to spare. The rich, warm humbucking bridge pickup adds a touch of thickness to the instruments voice, while special electronics ensure traditional Strat tone is close at hand; ready to go at a moments notice. A time-tested performer on stage and in the studio, this graceful performer with smooth, comfortable playing feel will easily handle any sonic needs that arise.',
+  address:        'Thomasstraße 5-3, 12053 Berlin',
+  longitude:      52.4737187,
+  latitude:       13.4392606,
+  image:          'https://www.fmicassets.com/Damroot/ZoomJpg/10002/0147202352_gtr_frt_001_rr.jpg',
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Acoustic',
+  description:    "The new Classic Design CT models feature a brand new body shape: Travel. Its short scale and compact size make it the perfect instrument to bring along wherever the music takes you. The CT-60S Travel body is derived from an Auditorium shape that's been scaled down to 23.5 for comfort and portability. A great choice for players of all ages and sizes, its an exceptional alternative to downsized instruments normally reserved for young strummers. Like all Classic Design guitars, the CT-60S includes a solid spruce top, easy-to-play neck profile and rolled fingerboard edges, along with mahogany back and sides and a rosewood fingerboard",
+  address:        'Körtestraße 28, 10967 Berlin',
+  longitude:      52.4901375,
+  latitude:       13.4078275,
+  image:          "https://www.fmicassets.com/Damroot/ZoomJpg/10002/0961713021_gtr_frt_001_rr.jpg",
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Acoustic',
+  description:    'Bringing to life the vision of one of the most respected guitarists in the world, the Eric Johnson Signature Stratocaster Thinline is the perfect marriage between a semi-hollow body and a traditional Stratocaster. Johnson is famous in guitar circles for questing for his ideal tone—liquid and articulate, it perfectly complements the playing style that earned his place in the modern guitar pantheon. In 2015 he approached us to co-design a lightweight, resonant instrument that combines the tones of his favorite semi-hollowbody guitars and his Stratocaster. Two years later, we hit the formula for tonal nirvana with the Eric Johnson Signature Stratocaster Thinline.',
+  address:        'Karl-Marx-Platz 5, 12043 Berlin',
+  longitude:      52.473971,
+  latitude:       13.4402972,
+  image:          'https://www.fmicassets.com/Damroot/ZoomJpg/10001/0961705021_gtr_frt_001_rr.jpg',
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Aucustic',
+  description:    'Combining powerful onboard electronics—including a built-in tuner—with great tone and easy playability, the CD-60SCE All-Mahogany is ideal for beginning to intermediate level players who are ready to plug in. Featuring a single-cutaway body for easy upper-fret access, warm-sounding solid mahogany top, easy-to-play neck and mahogany back and sides, the CD-60SCE is perfect for the couch, the beach or the coffeehouse—anywhere you want classic Fender playability and sound.',
+  address:        'Harzer Str. 37-39, 12059 Berlin',
+  longitude:      52.4847667,
+  latitude:       13.4472995,
+  image:          'http://www.deanguitars.com/images/productimages/rcenm/rcenm.png',
+  user_id:        User.first.id
+},
+{
+  brand:          'Fender',
+  category:       'Acoustic',
+  description:    "The Classic Design CN models combine the easy playability and distinct tone of nylon strings with the comfort of steel-string spacing. We've replaced the typically wide necks normally found on classical guitars with the same easy-playing neck profile found on all other Classic Design models. The CN-60S also features a solid spruce top, mahogany back and sides and rolled fingerboard edges.The CN-60S is a perfect choice for the developing player seeking a softer string that's easier to fret, while still offering the rich tones of a classical guitar. Putting comfort first, this instrument is an excellent starting point for those who are just beginning their musical journe",
+  address:        'Görlitzer Str. 1-6, 10997 Berlin',
+  longitude:      52.4983007,
+  latitude:       13.4329641,
+  image:          'https://www.fmicassets.com/Damroot/ZoomJpg/10001/0961714006_gtr_frt_001_rr.jpg',
+  user_id:        User.first.id
 }
 ]
 guitar_attributes.each do |attribute|
@@ -163,6 +244,53 @@ guitar_attributes.each do |attribute|
   guitar.remote_image_url = attribute[:image]
   guitar.save
 end
+
+Booking.create(fixed_price: 23, guitar_id: 16, user_id: 1, starts_at: "2018-03-01", ends_at: "2018-03-07")
+Booking.create(fixed_price: 23, guitar_id: 16, user_id: 1, starts_at: "2018-03-14", ends_at: "2018-03-21")
+Booking.create(fixed_price: 23, guitar_id: 16, user_id: 1, starts_at: "2018-03-25", ends_at: "2018-03-27")
+
+Booking.create(fixed_price: 23, guitar_id: 17, user_id: 1, starts_at: "2018-03-06", ends_at: "2018-03-12")
+Booking.create(fixed_price: 23, guitar_id: 17, user_id: 1, starts_at: "2018-03-14", ends_at: "2018-03-16")
+Booking.create(fixed_price: 23, guitar_id: 17, user_id: 1, starts_at: "2018-03-24", ends_at: "2018-03-27")
+
+Booking.create(fixed_price: 23, guitar_id: 18, user_id: 1, starts_at: "2018-03-11", ends_at: "2018-03-17")
+Booking.create(fixed_price: 23, guitar_id: 18, user_id: 1, starts_at: "2018-03-25", ends_at: "2018-03-27")
+
+Booking.create(fixed_price: 23, guitar_id: 19, user_id: 1, starts_at: "2018-03-16", ends_at: "2018-03-22")
+Booking.create(fixed_price: 23, guitar_id: 19, user_id: 1, starts_at: "2018-03-29", ends_at: "2018-03-29")
+
+Booking.create(fixed_price: 23, guitar_id: 20, user_id: 1, starts_at: "2018-03-21", ends_at: "2018-03-27")
+Booking.create(fixed_price: 23, guitar_id: 20, user_id: 1, starts_at: "2018-03-03", ends_at: "2018-03-04")
+Booking.create(fixed_price: 23, guitar_id: 20, user_id: 1, starts_at: "2018-03-13", ends_at: "2018-03-15")
+
+Booking.create(fixed_price: 23, guitar_id: 21, user_id: 1, starts_at: "2018-03-26", ends_at: "2018-03-30")
+Booking.create(fixed_price: 23, guitar_id: 21, user_id: 1, starts_at: "2018-03-10", ends_at: "2018-03-13")
+Booking.create(fixed_price: 23, guitar_id: 21, user_id: 1, starts_at: "2018-03-02", ends_at: "2018-03-05")
+
+Booking.create(fixed_price: 23, guitar_id: 22, user_id: 1, starts_at: "2018-03-03", ends_at: "2018-03-09")
+Booking.create(fixed_price: 23, guitar_id: 22, user_id: 1, starts_at: "2018-03-10", ends_at: "2018-03-11")
+Booking.create(fixed_price: 23, guitar_id: 22, user_id: 1, starts_at: "2018-03-28", ends_at: "2018-03-29")
+
+Booking.create(fixed_price: 23, guitar_id: 23, user_id: 1, starts_at: "2018-03-06", ends_at: "2018-03-07")
+Booking.create(fixed_price: 23, guitar_id: 23, user_id: 1, starts_at: "2018-03-14", ends_at: "2018-03-18")
+Booking.create(fixed_price: 23, guitar_id: 23, user_id: 1, starts_at: "2018-03-21", ends_at: "2018-03-22")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

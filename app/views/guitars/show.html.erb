@@ -16,10 +16,11 @@
     <div class="g-pic">
      <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
     </div>
+    <p><%= @guitar.address %></p>
 </div>
 
 <div class="btn-container" id="butt">
-    <% if policy(@booking).create? %>   
+    <% if policy(@booking).create? %>
          <%= form_for [@guitar, @booking] do |f| %>
             <%= f.label :Start %>
             <%= f.date_field :starts_at %>
