@@ -7,7 +7,7 @@ guitar_attributes = [
     description:  'This ultra-affordable dreadnought acoustic guitar features a whitewood body, which brings out lots of mid-range punch. The nato neck adds sustain without losing any strength in tone.',
     category:     'Acoustic',
     brand:        'Rogue RA-090 Dreadnought',
-    image:        'https://i.ebayimg.com/images/g/EtMAAOSwonBaHGKX/s-l1600.jpg',
+    image:        'https://images.pexels.com/photos/164897/pexels-photo-164897.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb',
     user_id:      User.first.id
   },
   {
@@ -37,7 +37,7 @@ guitar_attributes = [
     description:  'The best-in-class Mitchell MD400 offers a carved, double cutaway mahogany body and a one-piece mahogany set neck for superior tone and sustain. Both the neck and body are carefully bound in a stunning multi-ply binding/purfling to produce an amazing eye-catching aesthetic.',
     category:     'Acoustic',
     brand:        'Savannah SO-SGO-09E-BK 000',
-    image:        'http://media.guitarcenter.com/is/image/MMGS7/SO-SGO-09E-BK-000-Acoustic-Electric-Guitar-Black/J56471000001000-00-500x500.jpg',
+    image:        'https://musicalinstrumentmagazine.com/wp-content/uploads/2017/06/Mitchell-Guitars-MD400-Series-800x445.jpg',
     user_id:      User.first.id
   },
   {
