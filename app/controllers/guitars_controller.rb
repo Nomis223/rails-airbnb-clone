@@ -8,6 +8,13 @@ class GuitarsController < ApplicationController
     else
       @guitars = policy_scope(Guitar).all
     end
+    @markers = @guitars.map do |guitar|
+      {
+        lat: guitar.latitude,
+        lng: guitar.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def new
