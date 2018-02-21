@@ -5,6 +5,7 @@
   <div class="cards-container">
     <div class="row">
       <% @guitars.each do |guitar| %>
+        <% unless current_user == guitar.user %>
         <%= link_to guitar_path(guitar.id) do %>
           <div class="col-xs-12 col-sm-4">
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= guitar.image %>');">
@@ -15,6 +16,7 @@
               <img class="card-user" src= '<%= guitar.user.avatar %>'>
             </div>
           </div>
+        <% end %>
         <% end %>
       <% end %>
     </div>

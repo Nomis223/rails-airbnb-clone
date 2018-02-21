@@ -1,22 +1,32 @@
 <div class="place-photo-wrapper" style= "background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path("guitar-hero1.jpg") %>')">
 </div>
 
-<div class="g-pic">
-  <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+
+
+
+<div class="guitar-details">
+  <!-- <div class="row"> -->
+    <div class="guitar-text">
+      <!-- <h2><%= @guitar.user.email %>'s</h2> -->
+      <h1><%= @guitar.brand %></h1>
+      <h4><%= @guitar.category %></h4>
+      <p><%= @guitar.description %></p>
+    </div>
+
+    <div class="g-pic">
+     <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+    </div>
 </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6">
-        <h2><%= @guitar.user.email %>'s</h2>
-        <p><%= @guitar.brand %></p>
-        <p><%= @guitar.category %></p>
-        <p><%= @guitar.description %></p>
-      </div>
-      <div class="col-xs-6" id="butt">
-        <%=  link_to root_path do %>
-          <button class="btn btn-danger">Book!</button>
+<div class="btn-container" id="butt">
+    <% if policy(@booking).create? %>   
+         <%= form_for [@guitar, @booking] do |f| %>
+            <%= f.label :Start %>
+            <%= f.date_field :starts_at %>
+            <%= f.label :End %>
+            <%= f.date_field :ends_at %>
+            <%= f.submit %>
+          <% end %>
         <% end %>
-      </div>
-    </div>
   </div>
+</div>
