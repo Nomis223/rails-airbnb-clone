@@ -1,10 +1,19 @@
-<%= simple_form_for @guitar do |f| %>
-<%= f.input :brand %>
-<%= f.input :category %>
-<%= f.input :description %>
-<%= f.input :address %>
-<%= f.input :price_per_day %>
-<%= f.input :image %>
-<%= f.input :image_cache, as: :hidden %>
-<%= f.submit "add new guitar", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-4 col-sm-4">
+      <!-- This div is centered and takes 4 columns -->
+      <%= simple_form_for @guitar do |f| %>
+      <%= f.input :brand %>
+      <%= f.input :category %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.input :price_per_day %>
+      <%= f.input :image %>
+      <%= f.input :image_cache, as: :hidden %>
+      <%= f.submit "add new guitar", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
