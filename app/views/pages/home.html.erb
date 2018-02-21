@@ -42,3 +42,22 @@
 
   </div>
 </div>
+
+<script>
+  $(document).on("focus", "[data-behaviour~='datepicker']", function(e) {
+  $(this).datepicker;
+  return {
+    format: "dd-mm-yyyy",
+    weekStart: 1,
+    autoclose: true
+  };
+});
+</script>
+
+
+
+
+
+
+
+
