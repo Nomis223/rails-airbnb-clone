@@ -1,4 +1,5 @@
-//= require rails-ujs
-//= require_tree .
+// = require rails-ujs
+// = require jquery
+//= require bootstrap-sprockets
+// = require_tree .
 
-const form = getElementById("address-input")

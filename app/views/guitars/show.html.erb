@@ -14,8 +14,17 @@
         <p><%= @guitar.description %></p>
       </div>
       <div class="col-xs-6" id="butt">
-        <%=  link_to root_path do %>
-          <button class="btn btn-danger">Book!</button>
+
+      
+         
+        <% #  link_to guitar_bookings_path(@guitar, method: :post) do %>
+          <!-- <button class="btn btn-danger">Book!</button> -->
+        <% #end %>
+
+        <% if policy(@booking).create? %>       
+         <%= form_for [@guitar, @booking] do |f| %>
+             <%= f.submit %>
+          <% end %>
         <% end %>
       </div>
     </div>
