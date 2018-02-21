@@ -4,24 +4,29 @@
 
 
 
-  <div class="guitar-details">
-    <!-- <div class="row"> -->
-      <div class="guitar-text">
-        <!-- <h2><%= @guitar.user.email %>'s</h2> -->
-        <h1><%= @guitar.brand %></h1>
-        <h4><%= @guitar.category %></h4>
-        <p><%= @guitar.description %></p>
-      </div>
-</div>
+<div class="guitar-details">
+  <!-- <div class="row"> -->
+    <div class="guitar-text">
+      <!-- <h2><%= @guitar.user.email %>'s</h2> -->
+      <h1><%= @guitar.brand %></h1>
+      <h4><%= @guitar.category %></h4>
+      <p><%= @guitar.description %></p>
+    </div>
 
-  <div class="g-pic">
-        <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+    <div class="g-pic">
+     <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+    </div>
 </div>
 
 <div class="btn-container" id="butt">
-    <% if policy(@booking).create? %>       
+    <% if policy(@booking).create? %>   
          <%= form_for [@guitar, @booking] do |f| %>
-             <%= f.submit %>
+            <%= f.label :Start %>
+            <%= f.date_field :starts_at %>
+            <%= f.label :End %>
+            <%= f.date_field :ends_at %>
+            <%= f.submit %>
           <% end %>
         <% end %>
+  </div>
 </div>
