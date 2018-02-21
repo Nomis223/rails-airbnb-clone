@@ -26,13 +26,9 @@ class GuitarsController < ApplicationController
     end
   end
 
-  def new
-    @guitar = Guitar.new
-    authorize @guitar
-  end
-
   def show
     authorize @guitar
+    @booking = Booking.new(user_id: current_user.id, guitar_id: @guitar.id)
   end
 
   private
