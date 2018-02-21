@@ -1,10 +1,20 @@
 
+p {
+  font-size: 15px;
+}
+
+h4 {
+  font-weight: bold;
+}
 
 .g-pic img {
-  width: 200px;
-  margin: 0px auto;
-  margin-left: 493px;
-  margin-top: 15px;
+  width: 500px;
+  // margin: 15px;
+  text-align: right;
+  border-radius: 4px;                         /* Small radius */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px;
 }
 
 #butt {
@@ -16,7 +26,11 @@
   }
 }
 
-
+.btn-container {
+  text-align: right;
+  padding-right: 60px;
+  margin-bottom: 60px;
+}
 
 .place-photo-wrapper {
   color: white;
@@ -30,7 +44,15 @@
 }
 
 
+.guitar-details {
+  display: flex;
+  align-items: center;
+  padding: 60px 60px 0px;
+}
 
-
+.guitar-text {
+  flex-grow: 1;
+  padding-right: 30px;
+}
 
 
