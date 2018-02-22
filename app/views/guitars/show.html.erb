@@ -11,7 +11,9 @@
       <h1><%= @guitar.brand %></h1>
       <h4><%= @guitar.category %></h4>
       <p><%= @guitar.description %></p>
+      <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
     </div>
+
 
     <div class="g-pic">
      <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
@@ -19,7 +21,7 @@
 </div>
 
 <div class="btn-container" id="butt">
-    <% if policy(@booking).create? %>   
+    <% if policy(@booking).create? %>
          <%= form_for [@guitar, @booking] do |f| %>
             <%= f.label :Start %>
             <%= f.date_field :starts_at %>
