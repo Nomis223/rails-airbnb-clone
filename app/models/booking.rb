@@ -8,6 +8,7 @@ class Booking < ApplicationRecord
   price = self.guitar.price_per_day
   beg = Date.parse(self.starts_at)
   fin = Date.parse(self.ends_at)
-  self.fixed_price = (fin - beg) * price
+  number_of_days = fin - beg + 1
+  self.fixed_price = number_of_days * price
   end
 end
