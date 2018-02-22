@@ -2,24 +2,32 @@
 @import "home";
 @import "show";
 
+.heading-container {
+    margin-left: 30px;
+  }
 .main-wrapper {
   display: flex;
-  justify-content: space-between;
-  margin: 10px;
+  // justify-content: space-between;
+  margin: 20px;
 
   .cards-container {
     flex-grow: 1;
     padding-right: 20px;
+    padding-right: 10px;
 
     .card {
       height: 250px;
       background-size: cover;
       position: relative;
       margin-bottom: 10px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      border: 0px solid rgba(0, 0, 0, 0.1);
+
       .card-description {
         position:absolute;
-        bottom: 10px;
-        left: 10px;
+        bottom: 8px;
+        left: 8px;
         color: white;
       }
       .card-user {
@@ -29,9 +37,13 @@
       }
     }
   }
+
+
+
   #map {
     height: 100vh;
     width: 500px;
+    margin-left: 15px;
     flex: 0 0 450px;
     position: sticky !important;
     top: 0 !important;
