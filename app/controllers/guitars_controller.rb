@@ -1,6 +1,7 @@
 class GuitarsController < ApplicationController
 
   before_action :set_guitar, only:[:show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
 
@@ -57,7 +58,17 @@ class GuitarsController < ApplicationController
 
   def show
     authorize @guitar
-    @booking = Booking.new(user_id: current_user.id, guitar_id: @guitar.id)
+      puts " ================= "
+      p cookies[:booking]
+      p @booking
+    if cookies[:booking].present?
+      @booking = Booking.new #(starts_at: Date.parse(cookies[:booking]["booking"]['starts_at']))
+      @booking.guitar = @guitar
+      cookies[:booking] = nil
+    else
+      @booking = Booking.new
+      @booking.guitar = @guitar
+    end
   end
 
   private

@@ -6,6 +6,6 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def create?
-    record.guitar.user != user
+    user == nil || record.guitar.user != user
   end
 end
