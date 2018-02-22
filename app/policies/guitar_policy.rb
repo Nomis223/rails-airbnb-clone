@@ -6,6 +6,7 @@ class GuitarPolicy < ApplicationPolicy
   end
 
 
+
   def show?
     true
   end

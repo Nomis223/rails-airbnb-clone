@@ -12,20 +12,15 @@
 
         <input type="text" name="brand" class="form-control border-radius input-lg" placeholder="Brand">
         <input type="text" name="address" class="form-control border-radius input-lg" id="guitar_address" placeholder="City">
-        <input type="date" name="starts_at" class="form-control border-radius input-lg datepicker" placeholder="City">
-        <input type="date" name="ends_at" class="form-control border-radius input-lg datepicker" placeholder="City">
+        <input type="date" name="starts_at" class="form-control border-radius input-lg datepicker" placeholder="City" id="starts_at">
+        <input type="date" name="ends_at" class="form-control border-radius input-lg datepicker" placeholder="City" id="ends_at">
         <input type="submit" class="btn btn-danger btn-lg" value="Search">
       </form>
     </div>
   </div>
 </div>
 
-
-
-<h3 class = "text-center">Some of the <strong id="red-word">best guitars</strong> and <strong id="red-word">hosts</strong> in our community </h3>
-
-
-
+<% content_for :after_js do %>
 <script>
   $(document).on("focus", "[data-behaviour~='datepicker']", function(e) {
   $(this).datepicker;
@@ -36,6 +31,7 @@
   };
 });
 </script>
+<% end %>
 
 
 
