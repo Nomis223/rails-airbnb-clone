@@ -102,7 +102,7 @@ guitar_attributes = [
   brand:          'Gibson Flying V',
   category:       'Electric',
   description:    'The Flying V Custom adds the classic, refined and upscale Custom looks to one of Gibsons most legendary designs. The pointed, unorthodox lines of the V have always been magnetizing to the more daring guitar players among us - a visual statement with uncompromised Gibson tone. This rare edition adds a new layer of boldness to an already outspoken guitar.',
-  address:        'Neue Grünstraße 10',
+  address:        'Neue Grünstraße 10, Berlin',
   longitude:      52.5091396,
   latitude:       13.4029376,
   image:          'http://images.gibson.com.s3.amazonaws.com/Products/Electric-Guitars/2017/Custom/Flying-V-Custom/CSFVCPSL11050_MAIN_HERO_01.jpg',

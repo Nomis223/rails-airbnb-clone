@@ -1,0 +1,29 @@
+
+<h4>BOOKED GUITARS</h4>
+<% @bookings.each do |b| %>
+  <p><b><%= b.guitar[:brand] %></b></p>
+  <p><%= "TIME: #{b[:starts_at]}--#{b[:ends_at]}" %></p>
+  <p><%= "TYPE: #{b.guitar[:category]}" %></p>
+  <p><%= image_tag b.guitar.image %></p>
+<% end %>
+
+<h4>YOUR GUITARS</h4>
+<% @guitars.each do |g| %>
+  <p><b><%= g[:brand] %></b></p>
+  <p><%= "PRICE: #{g[:price_per_day]}" %></p>
+  <p><%= "TYPE: #{g[:category]}" %></p>
+  <% if g.bookings.present? %>
+    <p><b>BOOKINGS FOR THIS GUITAR</b></p>
+      <% g.bookings.each do |b| %>
+        <p><b><%= b.guitar[:brand] %></b></p>
+        <p><%= "TIME: #{b[:starts_at]}--#{b[:ends_at]}" %></p>
+        <p><%= "TYPE: #{b.guitar[:category]}" %></p>
+        <p><%= "USER: #{b.guitar.user[:email]}" %></p>
+        <p><%= image_tag b.guitar.image %></p>
+      <% end %>
+  <% else %>
+    <p><b>YOU HAVE NO BOOKINGS FOR THIS GUITAR</b></p>
+  <% end %>
+<% end %>
+
+
