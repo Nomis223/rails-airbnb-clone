@@ -1,55 +1,49 @@
-.message {
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto; /* MAGIC!!!!!*/
+  background-color: white;
+  padding: 15px;
+}
+
+.booked-guitars-container {
+  // display: flex;
+  margin: 0 auto;
+  padding: 15px;
+  // border-radius: 4px;
+  // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  // border-top: 1px solid rgba(0, 0, 0, 0.1);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.your-guitars-container {
   display: flex;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
+  margin: 0 auto;
+  padding: 15px;
+  // border-radius: 4px;
+  // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  // border-top: 1px solid rgba(0, 0, 0, 0.1);
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
-.message:last-child {
-  border-bottom: none;
+
+// * {
+//   border: 1px solid red;
+// }
+
+.card-content {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.message-body {
-  flex-grow: 1;
+
+.booked-guitars-container img {
+  width: 500px;
 }
-.message-name {
-  padding-left: 10px;
-  min-width: 100px;
+
+.card-text {
+  padding-top: 20px;
 }
-.message-name h3 {
-  font-size: 13px;
-  margin-bottom: 0px;
-}
-.message-name p {
-  font-size: 13px;
-  font-weight: lighter;
-  opacity: 0.6;
-  margin-top: 5px;
-}
-.message-body {
-  padding-left: 10px;
-  font-size: 13px;
-  color: rgba(0,0,0,0.7);
-}
-.message-body {
-  padding-left: 20px;
-  color: rgba(0,0,0,0.4);
-}
-.message-body strong{
-  color: rgba(0,0,0,0.9);
-  color: rgba(0,0,0,0.9);
-}
-.message-body p {
-  margin: 6px 0;
-}
-.message-status {
-  font-size: 14px;
-  font-weight: bold;
-}
-.status.accepted {
-  color: #04A366;
-}
-.status.declined {
-  color: red;
-}
-.status.pending {
-  color: lightgrey;
-}
+
+
+

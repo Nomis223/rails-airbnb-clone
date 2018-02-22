@@ -11,7 +11,9 @@
       <h1><%= @guitar.brand %></h1>
       <h4><%= @guitar.category %></h4>
       <p><%= @guitar.description %></p>
+      <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
     </div>
+
 
     <div class="g-pic">
      <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
