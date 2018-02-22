@@ -4,7 +4,8 @@
       <!-- This div is centered and takes 4 columns -->
       <%= simple_form_for @guitar do |f| %>
       <%= f.input :brand %>
-      <%= f.input :category %>
+      <%= f.label :category, "Category" %>
+      <%= f.select :category, ['Acoustic', 'Electric'] %>
       <%= f.input :description %>
       <%= f.input :address %>
       <%= f.input :price_per_day %>
