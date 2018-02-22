@@ -4,6 +4,8 @@
   <p><b><%= b.guitar[:brand] %></b></p>
   <p><%= "TIME: #{b[:starts_at]}--#{b[:ends_at]}" %></p>
   <p><%= "TYPE: #{b.guitar[:category]}" %></p>
+  <p><%= "Price/Day: #{b.guitar[:price_per_day]}" %></p>
+  <p><%= "TOTAL: #{b.fixed_price.to_i} €" %></p>
   <p><%= image_tag b.guitar.image %></p>
 <% end %>
 
