@@ -9,8 +9,8 @@
   <div class="booked-guitars-container">
     <% @bookings.each do |b| %>
     <% duration = Date.parse(b[:ends_at]) - Date.parse(b[:starts_at]) %>
-    <% fee = b.fixed_price.to_i * 0.2 %>
-    <% grand_total = b.fixed_price.to_i * 1.2 %>
+    <% fee = b.fixed_price.to_i * 0.1 %>
+    <% grand_total = b.fixed_price.to_i * 1.1 %>
       <div class="card-content">
         <div class="card-text">
           <p><b><%= b.guitar[:brand] %></b></p>
