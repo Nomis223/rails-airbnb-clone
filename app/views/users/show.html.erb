@@ -20,42 +20,48 @@
         </div>
       </div>
     <% end %>
-    </div>
   </div>
+</div>
 
-
+<!--
 <div class="wrapper">
 
   <div class="card-heading">
     <h4>Guitars I Have Uploaded</h4>
-    </div>
+  </div>
 
-  <div class="your-guitars-container">
+  <div class="booked-guitars-container">
     <% @guitars.each do |g| %>
       <div class="card-content">
-        <p><b><%= g[:brand] %></b></p>
-        <p><%= "PRICE: #{g[:price_per_day]}" %></p>
-        <p><%= "TYPE: #{g[:category]}" %></p>
-        <% if g.bookings.present? %>
-          <p><b>BOOKINGS FOR THIS GUITAR</b></p>
-            <% g.bookings.each do |b| %>
-              <p><b><%= b.guitar[:brand] %></b></p>
-              <p><%= "TIME: #{b[:starts_at]}--#{b[:ends_at]}" %></p>
-              <p><%= "TYPE: #{b.guitar[:category]}" %></p>
-              <p><%= "USER: #{b.guitar.user[:email]}" %></p>
-            <div>
-              <p><%= image_tag b.guitar.image %></p>
-            </div>
-            <% end %>
-        <% else %>
-          <p><b>No one Has Booked This Guitar Yet</b></p>
-        <% end %>
-      <% end %>
-      </div>
 
+        <div class="card-text">
+          <p><b><%= g[:brand] %></b></p>
+          <p><%= "PRICE: #{g[:price_per_day]}" %></p>
+          <p><%= "TYPE: #{g[:category]}" %></p>
+          <% if g.bookings.present? %>
+            <p><b>BOOKINGS FOR THIS GUITAR</b></p>
+              <% g.bookings.each do |b| %>
+                <p><b><%= b.guitar[:brand] %></b></p>
+                <p><%= "TIME: #{b[:starts_at]}--#{b[:ends_at]}" %></p>
+                <p><%= "TYPE: #{b.guitar[:category]}" %></p>
+                <p><%= "USER: #{b.guitar.user[:email]}" %></p>
+              </div>
+        </div>
+
+        <div>
+          <p><%= image_tag b.guitar.image %></p>
+        </div>
+
+              <% end %>
+              <% else %>
+            <p><b>No one Has Booked This Guitar Yet</b></p>
+          <% end %>
+      <% end %>
+
+    </div>
   </div>
 
 </div>
-
+ -->
 
 

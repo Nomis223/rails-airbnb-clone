@@ -43,11 +43,10 @@ h4 {
   justify-content: center;
 }
 
-
 .guitar-details {
   display: flex;
   align-items: center;
-  padding: 60px 60px 0px;
+  padding: 20px 60px 0px;
 }
 
 .guitar-text {
@@ -58,4 +57,36 @@ h4 {
 .price-show {
   padding-top: 20px;
   color: grey;
+  margin-bottom: 50px;
+}
+
+#booking_ends_at, #booking_starts_at {
+  height: 40px;
+  border-radius: 4px;
+}
+
+input #booking_starts_at {
+  color: lightgrey;
+}
+
+.wrapper-guitars {
+  max-width: 1000px;
+  margin: 60px auto; /* MAGIC!!!!!*/
+  margin-bottom: 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.wrapper-create-booking {
+  // display: flex;
+  // text-align: center;
+  max-width: 1000px;
+  margin: 30px auto; /* MAGIC!!!!!*/
+  background-color: white;
+  padding: 5px;
+}
+
+.btn-container {
+  text-align: center;
 }

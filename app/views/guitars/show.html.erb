@@ -3,36 +3,46 @@
 
 
 
-
-<div class="guitar-details">
-  <!-- <div class="row"> -->
-    <div class="guitar-text">
-      <!-- <h2><%= @guitar.user.email %>'s</h2> -->
-      <h1><%= @guitar.brand %></h1>
-      <h4><%= @guitar.category %></h4>
-      <p><%= @guitar.description %></p>
-      <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
-    </div>
+<div class="wrapper-guitars">
 
 
-    <div class="g-pic">
-     <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
-    </div>
-    <p><%= @guitar.address %></p>
-</div>
+  <div class="guitar-details">
+    <!-- <div class="row"> -->
+      <div class="guitar-text">
+        <!-- <h2><%= @guitar.user.email %>'s</h2> -->
+        <h2><%= @guitar.brand %></h2>
+        <h4><%= @guitar.category %></h4>
+        <p><%= @guitar.description %></p>
+        <p><%= @guitar.address %></p>
+        <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
+      </div>
 
-<div class="btn-container" id="butt">
-    <% if policy(@booking).create? %>
-         <%= form_for [@guitar, @booking] do |f| %>
-            <%= f.label :Start %>
-            <% session_start_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['starts_at']) : nil %>
-            <% session_end_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['ends_at']) : nil %>
 
-            <%= f.date_field :starts_at, value: session_start_time %>
-            <%= f.label :End %>
-            <%= f.date_field :ends_at, value: session_end_time %>
-            <%= f.submit %>
-          <% end %>
-        <% end %>
+      <div class="g-pic">
+       <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
+      </div>
+
   </div>
 </div>
+
+<div class="wrapper-create-booking">
+  <div class="btn-container" id="butt">
+      <% if policy(@booking).create? %>
+           <%= form_for [@guitar, @booking] do |f| %>
+              <%= f.label :Start %>
+              <% session_start_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['starts_at']) : nil %>
+              <% session_end_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['ends_at']) : nil %>
+
+              <%= f.date_field :starts_at, value: session_start_time %>
+              <%= f.label :End %>
+              <%= f.date_field :ends_at, value: session_end_time %>
+              <%= f.submit class:"btn btn-primary" %>
+            <% end %>
+          <% end %>
+    </div>
+  </div>
+
+</div>
+
+
+
