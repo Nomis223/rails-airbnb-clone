@@ -9,8 +9,8 @@
       <% @guitars.each do |guitar| %>
         <% unless current_user == guitar.user %>
         <%= link_to guitar_path(guitar.id) do %>
-          <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%= guitar.image %>');">
+          <div class="col-xs-12 col-sm-4 no-padding">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url('<%= guitar.image %>');">
               <div class="card-description">
                 <h4><%= guitar.brand[0..20] %></h4>
                 <p><%= guitar.price_per_day %> EUR/day</p>

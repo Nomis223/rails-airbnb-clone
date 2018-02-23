@@ -13,7 +13,7 @@
   .cards-container {
     flex-grow: 1;
     padding-right: 20px;
-    padding-right: 10px;
+    padding-left: 20px;
 
     .card {
       height: 250px;
@@ -50,5 +50,7 @@
   }
 }
 
-
+.no-padding {
+  padding: 5px;
+}
 
