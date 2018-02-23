@@ -17,8 +17,8 @@
   </div>
 
   <% duration = Date.parse(@booking[:ends_at]) - Date.parse(@booking[:starts_at]) %>
-  <% fee = @booking.fixed_price.to_i * 0.2 %>
-  <% grand_total = @booking.fixed_price.to_i * 1.2 %>
+  <% fee = @booking.fixed_price.to_i * 0.1 %>
+  <% grand_total = @booking.fixed_price.to_i * 1.1 %>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
