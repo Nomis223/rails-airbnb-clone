@@ -29,18 +29,13 @@
     <% if policy(@booking).create? %>
          <%= form_for [@guitar, @booking] do |f| %>
             <%= f.label :Start %>
-            <% session_start_time = cookies[:booking] #? Date.parse(cookies[:booking]) %>
-            <% session_end_time = cookies[:booking] #? Date.parse(cookies[:booking]) %>
-
-            <%= f.date_field :starts_at, value: session_start_time %>
+            <%= f.date_field :starts_at %>
             <%= f.label :End %>
-            <%= f.date_field :ends_at, value: session_end_time %>
+            <%= f.date_field :ends_at %>
             <%= f.submit %>
           <% end %>
+        <% end %>
     </div>
   </div>
 
 </div>
-
-
-
