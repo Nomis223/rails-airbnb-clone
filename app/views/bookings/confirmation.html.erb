@@ -1,0 +1,51 @@
+<h1>Order Summary</h1>
+
+  <div class="booked-guitars-container">
+      <div class="card-content">
+        <div class="card-text">
+          <p><b><%= @booking.guitar[:brand] %></b></p>
+          <p><%= "TIME: #{@booking[:starts_at]}--#{@booking[:ends_at]}" %></p>
+          <p><%= "TYPE: #{@booking.guitar[:category]}" %></p>
+          <p><%= "Price/Day: #{@booking.guitar[:price_per_day]}" %></p>
+          <p><%= "TOTAL: #{@booking.fixed_price.to_i} €" %></p>
+        </div>
+        <div>
+          <p><%= image_tag @booking.guitar.image %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default-special" data-dismiss="modal">Close</button>
+        
+      <%= link_to root_path(query: "Booked" ) do %>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

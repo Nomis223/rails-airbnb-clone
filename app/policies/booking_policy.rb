@@ -8,4 +8,8 @@ class BookingPolicy < ApplicationPolicy
   def create?
     user == nil || record.guitar.user != user
   end
+
+  def confirmation?
+    true
+  end
 end
