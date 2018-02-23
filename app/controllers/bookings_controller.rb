@@ -16,8 +16,13 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       authorize @booking
       @booking.save
-      redirect_to root_path   
+      redirect_to confirmation_guitar_booking_path(@booking.guitar, @booking)  
     end  
+  end
+
+  def confirmation
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   private
