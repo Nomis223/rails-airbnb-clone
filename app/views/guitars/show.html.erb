@@ -25,19 +25,17 @@
   </div>
 </div>
 
-<div class="wrapper-create-booking">
-  <div class="btn-container" id="butt">
-      <% if policy(@booking).create? %>
-           <%= form_for [@guitar, @booking] do |f| %>
-              <%= f.label :Start %>
-              <% session_start_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['starts_at']) : nil %>
-              <% session_end_time = cookies[:booking] ? Date.parse(cookies[:booking]['booking']['ends_at']) : nil %>
+<div class="btn-container" id="butt">
+    <% if policy(@booking).create? %>
+         <%= form_for [@guitar, @booking] do |f| %>
+            <%= f.label :Start %>
+            <% session_start_time = cookies[:booking] #? Date.parse(cookies[:booking]) %>
+            <% session_end_time = cookies[:booking] #? Date.parse(cookies[:booking]) %>
 
-              <%= f.date_field :starts_at, value: session_start_time %>
-              <%= f.label :End %>
-              <%= f.date_field :ends_at, value: session_end_time %>
-              <%= f.submit class:"btn btn-primary" %>
-            <% end %>
+            <%= f.date_field :starts_at, value: session_start_time %>
+            <%= f.label :End %>
+            <%= f.date_field :ends_at, value: session_end_time %>
+            <%= f.submit %>
           <% end %>
     </div>
   </div>
