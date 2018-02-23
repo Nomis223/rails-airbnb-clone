@@ -16,16 +16,16 @@
   margin-bottom: 20px;
 }
 
-.your-guitars-container {
-  display: flex;
-  margin: 0 auto;
-  padding: 15px;
-  // border-radius: 4px;
-  // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  // border-top: 1px solid rgba(0, 0, 0, 0.1);
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
+// .your-guitars-container {
+//   display: flex;
+//   margin: 0 auto;
+//   padding: 15px;
+//   // border-radius: 4px;
+//   // box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+//   // border-top: 1px solid rgba(0, 0, 0, 0.1);
+//   // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+//   margin-bottom: 20px;
+// }
 
 // * {
 //   border: 1px solid red;
@@ -37,12 +37,17 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.card-content img {
+  padding: 10px 0px;
+}
+
 .booked-guitars-container img {
   width: 500px;
 }
 
 .card-text {
   padding-top: 20px;
+  flex-grow: 1;
 }
 
 
