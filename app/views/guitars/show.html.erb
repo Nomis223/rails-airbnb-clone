@@ -25,6 +25,8 @@
   </div>
 </div>
 
+<div class="wrapper-create-booking">
+
 <div class="btn-container" id="butt">
     <% if policy(@booking).create? %>
          <%= form_for [@guitar, @booking] do |f| %>
@@ -32,10 +34,11 @@
             <%= f.date_field :starts_at %>
             <%= f.label :End %>
             <%= f.date_field :ends_at %>
-            <%= f.submit %>
+            <%= f.submit class:"btn btn-primary btn-lg" %>
           <% end %>
         <% end %>
     </div>
+  </div>
   </div>
 
 </div>
