@@ -20,22 +20,30 @@
 
       <div class="g-pic">
        <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
-      </div>
+     </div>
 
-  </div>
+   </div>
+ </div>
+
+ <div class="btn-container" id="butt">
+  <% if policy(@booking).create? %>
+  <%= form_for [@guitar, @booking] do |f| %>
+  <%= f.label :Start %>
+  <%= f.date_field :starts_at %>
+  <%= f.label :End %>
+  <%= f.date_field :ends_at %>
+  <%= f.submit "Book this guitar" %>
+  <% end %>
+  <% end %>
 </div>
 
-<div class="btn-container" id="butt">
-    <% if policy(@booking).create? %>
-         <%= form_for [@guitar, @booking] do |f| %>
-            <%= f.label :Start %>
-            <%= f.date_field :starts_at %>
-            <%= f.label :End %>
-            <%= f.date_field :ends_at %>
-            <%= f.submit %>
-          <% end %>
-        <% end %>
-    </div>
-  </div>
-
-</div>
+<script>
+  // Gets original date values from local storage and inserts them in date fields
+  function retrieveFromLocalStorage() {
+      const valueA = localStorage['startValue'];
+      const valueB = localStorage['endValue'];
+      document.getElementById("booking_starts_at").value = valueA
+      document.getElementById("booking_ends_at").value = valueB
+    };
+    retrieveFromLocalStorage()
+</script>

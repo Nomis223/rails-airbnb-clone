@@ -6,22 +6,39 @@ function dateAutocomplete() {
 
     date_elements.forEach(function(elem) {
       elem.addEventListener("blur", function () {
-        const starts_at = document.getElementById("starts_at").value;
-        const ends_at = document.getElementById("ends_at").value;
-        if (starts_at != "" && ends_at == "") {
-          endsAtAutocomplete()
-        } else if (starts_at == "" && ends_at != "") {
-          startsAtAutocomplete()
+        const startsAt = document.getElementById("starts_at").value;
+        const endsAt = document.getElementById("ends_at").value;
+
+        if (startsAt != "" && endsAt == "") {
+          endsAtAutocomplete(startsAt)
+        }
+
+        else if (startsAt == "" && endsAt != "") {
+          startsAtAutocomplete(endsAt)
+        }
+
+        else if (startsAt != "" && endsAt != "") {
+          sendToLocalStorage(startsAt, endsAt)
         };
       });
     });
 
-    function endsAtAutocomplete() {
-      document.getElementById("ends_at").value = document.getElementById("starts_at").value
+    function endsAtAutocomplete(startValue) {
+      document.getElementById("ends_at").value = startValue;
+      sendToLocalStorage(startValue, startValue);
     };
 
-    function startsAtAutocomplete() {
-      document.getElementById("starts_at").value = document.getElementById("ends_at").value
+    function startsAtAutocomplete(endValue) {
+      document.getElementById("starts_at").value = endValue;
+      sendToLocalStorage(endValue, endValue);
+    };
+
+    function sendToLocalStorage(startValue, endValue) {
+      console.log(startValue);
+      console.log(endValue);
+      localStorage['startValue'] = startValue;
+      localStorage['endValue'] = endValue;
+      retrieveFromLocalStorage();
     };
   });
 };

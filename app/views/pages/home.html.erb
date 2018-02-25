@@ -11,7 +11,6 @@
 
     <div class="search-bar">
       <form action="/guitars" class="form-inline padded">
-
         <input type="text" name="brand" class="form-control border-radius input-lg" placeholder="Brand">
         <input type="text" name="address" class="form-control border-radius input-lg" id="guitar_address" placeholder="City">
         <input type="date" name="starts_at" class="form-control border-radius input-lg datepicker" placeholder="City" id="starts_at">
@@ -23,7 +22,8 @@
 </div>
 
 <% content_for :after_js do %>
-<script>
+
+<!-- <script>
   $(document).on("focus", "[data-behaviour~='datepicker']", function(e) {
   $(this).datepicker;
   return {
@@ -32,7 +32,7 @@
     autoclose: true
   };
 });
-</script>
+</script> -->
 <% end %>
 
 

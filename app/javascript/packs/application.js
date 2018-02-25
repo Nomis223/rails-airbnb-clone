@@ -8,4 +8,3 @@
 // layout file, like app/views/layouts/application.html.erb
 import { dateAutocomplete } from '../components/date_autocomplete';
 dateAutocomplete();
-
