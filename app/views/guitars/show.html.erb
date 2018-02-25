@@ -1,10 +1,7 @@
 <div class="place-photo-wrapper" style= "background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path("guitar-hero1.jpg") %>')">
 </div>
 
-
-
 <div class="wrapper-guitars">
-
 
   <div class="guitar-details">
     <!-- <div class="row"> -->
@@ -17,13 +14,12 @@
         <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
       </div>
 
-
       <div class="g-pic">
        <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
-      </div>
+     </div>
 
-  </div>
-</div>
+   </div>
+ </div>
 
 <div class="wrapper-create-booking">
 
@@ -42,3 +38,15 @@
   </div>
 
 </div>
+
+<script>
+  // Gets original date values from local storage and inserts them in date fields
+  function retrieveFromLocalStorage() {
+      const valueA = localStorage['startValue'];
+      const valueB = localStorage['endValue'];
+      document.getElementById("booking_starts_at").value = valueA
+      document.getElementById("booking_ends_at").value = valueB
+    };
+    retrieveFromLocalStorage()
+</script>
+
