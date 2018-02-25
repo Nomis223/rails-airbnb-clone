@@ -63,10 +63,15 @@ h4 {
 #booking_ends_at, #booking_starts_at {
   height: 40px;
   border-radius: 4px;
+  margin-right: 20px;
 }
 
 input #booking_starts_at {
   color: lightgrey;
+}
+
+input #new-booking {
+  padding-bottom: 2px;
 }
 
 .wrapper-guitars {
@@ -85,8 +90,10 @@ input #booking_starts_at {
   margin: 30px auto; /* MAGIC!!!!!*/
   background-color: white;
   padding: 5px;
+  margin-bottom: 50px;
 }
 
 .btn-container {
   text-align: center;
 }
+

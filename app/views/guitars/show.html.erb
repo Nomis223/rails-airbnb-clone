@@ -1,10 +1,7 @@
 <div class="place-photo-wrapper" style= "background-image:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path("guitar-hero1.jpg") %>')">
 </div>
 
-
-
 <div class="wrapper-guitars">
-
 
   <div class="guitar-details">
     <!-- <div class="row"> -->
@@ -17,7 +14,6 @@
         <h4 class="price-show"><%= @guitar.price_per_day %> EUR/day</h4>
       </div>
 
-
       <div class="g-pic">
        <%= image_tag @guitar.image, alt: 'Guitar Picture'%>
      </div>
@@ -25,16 +21,22 @@
    </div>
  </div>
 
- <div class="btn-container" id="butt">
-  <% if policy(@booking).create? %>
-  <%= form_for [@guitar, @booking] do |f| %>
-  <%= f.label :Start %>
-  <%= f.date_field :starts_at %>
-  <%= f.label :End %>
-  <%= f.date_field :ends_at %>
-  <%= f.submit "Book this guitar" %>
-  <% end %>
-  <% end %>
+<div class="wrapper-create-booking">
+
+<div class="btn-container" id="butt">
+    <% if policy(@booking).create? %>
+         <%= form_for [@guitar, @booking] do |f| %>
+            <%= f.label :Start %>
+            <%= f.date_field :starts_at %>
+            <%= f.label :End %>
+            <%= f.date_field :ends_at %>
+            <%= f.submit class:"btn btn-primary btn-lg" %>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+  </div>
+
 </div>
 
 <script>
@@ -47,3 +49,4 @@
     };
     retrieveFromLocalStorage()
 </script>
+
